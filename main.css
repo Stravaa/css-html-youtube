@@ -1,14 +1,14 @@
-p {
-  font-family: roboto, arial;
-  margin: 0px;
-}
 body {
+  font-family: Roboto, Arial;
   margin: 0;
   padding-bottom: 3000px;
   padding-left: 96px;
   padding-right: 24px;
   margin-top: 80px;
   background-color: rgb(249, 249, 249);
+}
+p {
+  margin: 0px;
 }
 .header {
   height: 55px;
@@ -59,7 +59,6 @@ body {
   width: 0;
 }
 .search-bar::placeholder {
-  font-family: roboto, arial;
   font-size: 16px;
 }
 .search-btn {
@@ -114,7 +113,6 @@ body {
   color: white;
   border-radius: 50%;
   font-size: 11px;
-  font-family: Roboto, arial;
   padding: 2px 5px;
 }
 .search-btn,
@@ -135,7 +133,6 @@ body {
 .upload-container .tooltip,
 .apps-container .tooltip,
 .notifications-icon-container .tooltip {
-  font-family: roboto, arial;
   font-size: 12px;
   position: absolute;
   bottom: -30px;
@@ -160,19 +157,64 @@ body {
   border-radius: 50px;
   cursor: pointer;
 }
+.sidebar {
+  background: white;
+  padding-top: 5px;
+
+  position: fixed;
+  top: 55px;
+  bottom: 0;
+  left: 0;
+  width: 77px;
+  z-index: 200;
+}
+.sidebar-link {
+  height: 74px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar-link:hover {
+  background-color: rgb(233, 233, 233);
+  cursor: pointer;
+}
+.sidebar-link img {
+  height: 24px;
+  margin-bottom: 4px;
+}
+.sidebar-link div {
+  font-family: Robot, arial;
+  font-size: 10px;
+}
 .thumbnail {
   width: 100%;
   cursor: pointer;
-}
-.video-info-grid {
-  display: grid;
-  grid-template-columns: 50px 1fr;
 }
 .video-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 16px;
   row-gap: 40px;
+}
+@media (max-width: 750px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 751px) and (max-width: 999px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1000px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
 }
 .channel-picture {
   width: 36px;
@@ -213,12 +255,10 @@ body {
 }
 .channel-tooltip-name {
   color: #000;
-  font-family: Roboto, Arial;
   font-weight: bold;
   margin-bottom: 4px;
 }
 .channel-stats {
-  font-family: Roboto, Arial;
   color: rgb(96, 96, 96);
   font-size: 14px;
 }
@@ -239,10 +279,10 @@ body {
   cursor: pointer;
 }
 .video-time {
-  font-family: Roboto, Arial;
   font-size: 12px;
   font-weight: 500;
   padding: 4px;
+
   position: absolute;
   bottom: 8px;
   right: 5px;
@@ -259,34 +299,4 @@ body {
 .video-author {
   margin-bottom: 4px;
   cursor: pointer;
-}
-.sidebar {
-  position: fixed;
-  top: 55px;
-  bottom: 0;
-  left: 0;
-  width: 77px;
-  background: white;
-  z-index: 200;
-  padding-top: 5px;
-}
-.sidebar-link {
-  height: 74px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.sidebar-link:hover {
-  background-color: rgb(233, 233, 233);
-  cursor: pointer;
-}
-
-.sidebar-link img {
-  height: 24px;
-  margin-bottom: 4px;
-}
-.sidebar-link div {
-  font-family: Robot, arial;
-  font-size: 10px;
 }
